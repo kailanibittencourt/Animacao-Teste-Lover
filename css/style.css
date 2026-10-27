@@ -1,0 +1,131 @@
+/* Define o estilo geral da página */
+body {
+  background-color: #ffe4ef;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+/* Organiza o conteúdo principal */
+.container {
+  width: 350px;
+  max-width: 90%;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: white;
+  border: 3px solid pink;
+  border-radius: 20px;
+}
+
+/* Personaliza o título */
+h1 {
+  color: #e75480;
+}
+
+/* Estiliza os nomes */
+.nomes {
+  background-color: #fff0f5;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Define o tamanho e a animação do gatinho */
+.gatinho {
+  width: 100px;
+  display: block;
+  margin: 20px auto;
+
+  animation: pular 1s infinite;
+}
+
+/* Faz o gatinho pular para cima e para baixo */
+@keyframes pular {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Mensagem de carregamento */
+.calculando {
+  color: #d63384;
+  animation: sumir 0.5s 5s forwards;
+}
+
+/* Área externa da barra */
+.barra {
+  width: 100%;
+  height: 25px;
+  background-color: #f8d7e4;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Parte rosa que vai crescendo */
+.progresso {
+  width: 0%;
+  height: 100%;
+  background-color: #ff69b4;
+
+  animation: carregar 5s forwards;
+}
+
+/* Animação do carregamento */
+@keyframes carregar {
+  0% {
+    width: 10%;
+  }
+
+  25% {
+    width: 20%;
+  }
+
+  50% {
+    width: 30%;
+  }
+
+  75% {
+    width: 85%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* Esconde o resultado inicialmente */
+.resultado {
+  opacity: 0;
+  color: #e75480;
+
+  animation: aparecer 1s 5s forwards;
+}
+
+/* Faz o resultado aparecer */
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Faz a mensagem de carregamento desaparecer */
+@keyframes sumir {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
